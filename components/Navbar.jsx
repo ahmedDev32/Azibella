@@ -7,11 +7,15 @@ function Navbar() {
   const [menu, setMenu] = useState(false);
   const router = useRouter();
 
+  const handleLinkClick = () => {
+    setMenu(false);
+  };
+
   return (
     <>
       <nav className="w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 shadow-sm">
         <div className="w-full text-center p-2 bg-sky-300 text-sm text-white">
-          Expand Your Shopping Journey With Our Amazing Products 
+          Expand Your Shopping Journey With Our Amazing Products
         </div>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-white">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -38,34 +42,33 @@ function Navbar() {
               </svg>
             </button>
           </div>
-          <div className={`fixed top-0 left-0 h-full bg-white z-30 transform ${menu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex md:w-auto md:order-1`} id="navbar-sticky">
+          <div className={fixed top-0 left-0 h-full bg-white z-30 transform ${menu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex md:w-auto md:order-1} id="navbar-sticky">
             <ul className="flex flex-col p-4 mt-4 space-y-4 md:space-y-0 md:flex-row md:space-x-6 md:mt-0 md:p-0 ">
               <li>
-                <Link href="/" className="block py-2 px-4 text-black rounded hover:text-sky-400" aria-current="page">
+                <Link href="/" className="block py-2 px-4 text-black rounded hover:text-sky-400" aria-current="page" onClick={handleLinkClick}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/About" className="block py-2 px-4 text-black rounded hover:text-sky-400" aria-current="page">
+                <Link href="/About" className="block py-2 px-4 text-black rounded hover:text-sky-400" aria-current="page" onClick={handleLinkClick}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/Beauty" className="block py-2 px-4 text-black rounded hover:text-sky-400">
-                Beauty
+                <Link href="/Beauty" className="block py-2 px-4 text-black rounded hover:text-sky-400" onClick={handleLinkClick}>
+                  Beauty
                 </Link>
               </li>
               <li>
-                <Link href="/Surgical" className="block py-2 px-4 text-black rounded hover:text-sky-400">
+                <Link href="/Surgical" className="block py-2 px-4 text-black rounded hover:text-sky-400" onClick={handleLinkClick}>
                   Surgical & Dental
                 </Link>
               </li>
               <li>
-                <Link href="/Contact" className="block py-2 px-4 text-black rounded hover:text-sky-400">
+                <Link href="/Contact" className="block py-2 px-4 text-black rounded hover:text-sky-400" onClick={handleLinkClick}>
                   Contact Us
                 </Link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -74,4 +77,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar
