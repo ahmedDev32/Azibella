@@ -114,7 +114,7 @@ const CheckOut = () => {
                     <div className="flex w-full flex-col px-4 py-4">
                       <span className="font-semibold">{item.name}</span>
                       <span className="float-right text-gray-400">{item.category}</span>
-                      <p className="text-lg flex font-bold">$ <ChangePrice processedPrice={item.processedPrice} qty={item.qty} /></p>
+                      {/* <p className="text-lg flex font-bold">$ <ChangePrice processedPrice={item.processedPrice} qty={item.qty} /></p> */}
                     </div>
                   </div>
                 )
@@ -172,14 +172,12 @@ const CheckOut = () => {
       </div>
 
       <div className="mt-6 border-t border-b py-2">
-        <div className="flex items-center mb-2 justify-between">
-          <p className="text-sm font-medium text-gray-900">Subtotal</p>
-          <p className="font-semibold text-gray-900">${Subtotal}</p>
-        </div>
-        <div className="flex items-center mb-2 justify-between">
+        {/* < className="flex items-center mb-2 justify-between">
+          {/* <p className="text-sm font-medium text-gray-900">Subtotal</p> */}
+          {/* <p className="font-semibold text-gray-900">${Subtotal}</p> */}
+        {/* <div className="flex items-center mb-2 justify-between">
           <p className="text-sm font-medium text-gray-900">Shipping</p>
-          <p className="font-semibold text-gray-900">$0.10</p>
-        </div>
+          {/* <p className="font-semibold text-gray-900">$0.10</p> */}
       </div>
       {/* <div className="mt-6 flex items-center justify-between">
         <p className="text-sm font-medium text-gray-900">Total</p>
