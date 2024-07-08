@@ -32,9 +32,9 @@ function Navbar() {
             <button
               onClick={() => setMenu(!menu)}
               type="button"
-              className="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className={`inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${menu ? 'transform translate-x-0' : 'transform -translate-x-full'} transition-transform duration-300 ease-in-out`}
               aria-controls="navbar-sticky"
-              aria-expanded="false"
+              aria-expanded={menu ? "true" : "false"}
             >
               <span className="sr-only">Open main menu</span>
               <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -42,8 +42,8 @@ function Navbar() {
               </svg>
             </button>
           </div>
-          <div className={fixed top-0 left-0 h-full bg-white z-30 transform ${menu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex md:w-auto md:order-1} id="navbar-sticky">
-            <ul className="flex flex-col p-4 mt-4 space-y-4 md:space-y-0 md:flex-row md:space-x-6 md:mt-0 md:p-0 ">
+          <div className={`fixed top-0 left-0 h-full bg-white z-30 md:static md:flex md:w-auto md:order-1 md:translate-x-0 ${menu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`} id="navbar-sticky">
+            <ul className="flex flex-col p-4 mt-4 space-y-4 md:space-y-0 md:flex-row md:space-x-6 md:mt-0 md:p-0">
               <li>
                 <Link href="/" className="block py-2 px-4 text-black rounded hover:text-sky-400" aria-current="page" onClick={handleLinkClick}>
                   Home
@@ -77,4 +77,4 @@ function Navbar() {
   );
 }
 
-export default Navbar
+export default Navbar;
