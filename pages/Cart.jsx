@@ -187,7 +187,7 @@ const Cart = () => {
 
           <div className="flex items-center justify-center gap-2">
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
-            <Link href="/Products?p=Surgical" title="" className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 underline hover:no-underline dark:text-gray-500">
+            <Link href="/Products?p=All" title="" className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 underline hover:no-underline dark:text-gray-500">
               Continue Shopping
               <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stokeLinecap="round" stokeLinejoin="round" stokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
