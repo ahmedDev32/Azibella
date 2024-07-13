@@ -43,7 +43,7 @@ const ProductsCards = ({ data }) => {
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xl font-bold text-blue-900 dark:text-white sm:text-lg">{data.price}</span> {/* Adjust font size for mobile */}
+            <span className="text-xl font-bold text-blue-900 dark:text-white sm:text-lg"></span> {/* Adjust font size for mobile */}
             <span
               onClick={() => {
                 router.push(`${process.env.NEXT_PUBLIC_HOST}/productsDetails/Id=${data._id}`);
