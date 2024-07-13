@@ -104,7 +104,7 @@ let [Down,SetDown] = useState(false)
 
      </div>
      <button
-  className="fixed left-4 bg-gray-300 text-gray-800 py-2 px-4 rounded-lg shadow-md sm:py-3 sm:px-6 sm:rounded-md flex items-center justify-center"
+  className="bg-gray-300 text-gray-800 py-2 px-4 rounded-lg  m-autoshadow-md sm:py-3 sm:px-6 sm:rounded-md flex items-center justify-center"
   onClick={() => window.history.back()}
 >
   <FaArrowLeft className="mr-2" /> Go Back
