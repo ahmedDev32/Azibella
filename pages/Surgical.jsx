@@ -51,10 +51,18 @@ export default function Home() {
         </li>
         <li className="rounded-lg overflow-hidden border border-gray-200">
           <a
+            href="/Products?p=Dental Instruments"
+            className="block px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none"
+          >
+            Dental Instruments
+          </a>
+        </li>
+        <li className="rounded-lg overflow-hidden border border-gray-200">
+          <a
             href="/Products?p=Cardiovascular"
             className="block px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none"
           >
-            Carddiovascular
+            Cardiovascular
           </a>
         </li>
         <li className="rounded-lg overflow-hidden border border-gray-200">
@@ -81,59 +89,9 @@ export default function Home() {
             Retractors
           </a>
         </li>
-        <li className="rounded-lg overflow-hidden border border-gray-200">
-          <button
-            type="button"
-            onClick={() => toggleDropdown('category1')}
-            className="flex items-center justify-between w-full px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none"
-          >
-            <span>Dental Instruments</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className={`h-4 w-4 fill-current ${
-                openDropdown === 'category1' ? 'transform rotate-180' : ''
-              } text-gray-600 transition-transform duration-300`}
-            >
-              <path fillRule="evenodd" d="M12 17l6-6H6l6 6z" />
-            </svg>
-          </button>
-          {/* Dropdown content for Category 1 */}
-          <ul
-            className={`${
-              openDropdown === 'category1' ? 'block' : 'hidden'
-            } bg-white shadow-md rounded-md py-2 px-3 mt-1`}
-          >
-            <li>
-              <a
-                href="/Products?p=Mouth Mirrors"
-                className="text-gray-700 hover:text-blue-500 block"
-              >
-                Mouth Mirrors
-              </a>
-            </li>
-            <li>
-              <a
-                href="/Products?p=Dental Curettes"
-                className="text-gray-700 hover:text-blue-500 block"
-              >
-                Dental Curettes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/Products?p=Diagnostics"
-                className="text-gray-700 hover:text-blue-500 block"
-              >
-                Diagnostics
-              </a>
-            </li>
-          </ul>
-        </li>
       </ul>
     </div>
     <Footer/>
     </div>
   );
 }
-
