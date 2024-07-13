@@ -61,7 +61,7 @@ function Navbar() {
               </svg>
             </button>
           </div>
-          <div ref={menuRef} className={fixed top-0 left-0 h-full bg-white z-30 transform ${menu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex md:w-auto md:order-1} id="navbar-sticky">
+          <div ref={menuRef} className={`fixed top-0 left-0 h-full bg-white z-30 transform ${menu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex md:w-auto md:order-1`} id="navbar-sticky">
             <ul className="flex flex-col p-4 mt-4 space-y-4 md:space-y-0 md:flex-row md:space-x-6 md:mt-0 md:p-0 ">
               <li>
                 <Link href="/" className="block py-2 px-4 text-black rounded hover:text-sky-400" aria-current="page" onClick={handleLinkClick}>
